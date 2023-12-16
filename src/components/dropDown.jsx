@@ -13,7 +13,7 @@ const Dropdown = ({ items, menuText }) => {
     <div className="relative">
       <button
         onClick={toggleDropdown}
-        className="flex items-center px-4 py-2 text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-300 ease-in-out"
+        className="flex w-full justify-between  items-center  py-3 text-gray-700 dark:text-white dark:hover:text-slate-300 hover:text-gray-900 focus:outline-none dark:focus:text-white focus:text-gray-900 transition duration-300 ease-in-out"
       >
         <span>{menuText}</span>
         <svg
@@ -32,12 +32,12 @@ const Dropdown = ({ items, menuText }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 right-0 mt-2 space-y-2 bg-white border border-gray-300 rounded shadow-lg w-48">
+        <div className="absolute z-10 right-0 mt-2 space-y-2 dark:bg-slate-800 bg-white border dark:border-slate-600 border-gray-300 rounded shadow-lg w-48">
           {items.map((item) => (
             <a
               key={item.id}
               href={item.link}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out"
+              className="block px-4 py-2 text-sm dark:text-white text-gray-700 dark:hover:bg-slate-700 hover:bg-gray-100 transition duration-300 ease-in-out"
             >
               {item.text}
             </a>

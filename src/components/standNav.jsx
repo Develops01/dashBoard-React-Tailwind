@@ -1,4 +1,10 @@
 import Dropdown from "./dropDown";
+import {
+  faHome,
+  faComments,
+  faCircleQuestion,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const StandNav = () => {
   const dropdownItems1 = [
     { id: 1, text: "شراره", link: "/" },
@@ -17,37 +23,41 @@ const StandNav = () => {
   ];
 
   return (
-    <div>
-      <ul className="absolute sm:relative z-20 sm:pt-0 pt-14 mobile-menu hidden h-screen sm:h-full menu flex-nowrap sm:flex flex-col bg-base-200 md:w-56">
+    <>
+      <ul className=" h-screen flex flex-col gap-4 w-56 bg-white dark:bg-slate-800  px-6 py-8 ring-1 ring-slate-900/5 shadow-xl dark:text-white">
+        <li className="flex justify-center items-center gap-2  cursor-default">
+          <p className=" text-xl ">دانشگاه آراد</p>
+          <img
+            alt="آراد برندینگ"
+            className=""
+            src="https://aradbranding.com/en/uploads/settings/16688039641546.png"
+            width="60"
+            height="60"
+          />
+        </li>
+        <li className="flex gap-2">
+          <a
+            className="flex items-center gap-2 dark:hover:text-slate-300 transition duration-300 ease-in-out"
+            href="index.html"
+          >
+            <FontAwesomeIcon icon={faHome} className="coffee-icon" /> پیشخوان{" "}
+          </a>
+        </li>
         <li>
           <a
-            href="index.html"
-            className="hidden sm:flex btn btn-ghost text-xl my-10"
+            className="flex items-center gap-2 dark:hover:text-slate-300 transition duration-300 ease-in-out"
+            href="pages/comment.html"
           >
-            دانشگاه آراد
-            <img
-              alt="آراد برندینگ"
-              className="w-10 h-10"
-              src="https://aradbranding.com/en/uploads/settings/16688039641546.png"
-              width="60"
-              height="60"
-            />
-          </a>
-        </li>
-        <li className="pt-5">
-          <a href="index.html">
-            <i className="fa-solid fa-home"></i> پیشخوان{" "}
-          </a>
-        </li>
-        <li>
-          <a href="pages/comment.html">
-            <i className="fa-solid fa-comment"></i>
+            <FontAwesomeIcon icon={faComments} />
             نظرات
           </a>
         </li>
         <li>
-          <a href="pages/questionList.html">
-            <i className="fa-solid fa-question"></i>
+          <a
+            className="flex items-center gap-2 dark:hover:text-slate-300 transition duration-300 ease-in-out"
+            href="pages/questionList.html"
+          >
+            <FontAwesomeIcon icon={faCircleQuestion} />
             پرسش و پاسخ
           </a>
         </li>
@@ -58,7 +68,7 @@ const StandNav = () => {
           <Dropdown items={dropdownItems3} menuText="جاوید" />
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 
