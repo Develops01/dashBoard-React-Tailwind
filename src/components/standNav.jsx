@@ -5,6 +5,7 @@ import {
   faCircleQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const StandNav = () => {
   const dropdownItems1 = [
     { id: 1, text: "شراره", link: "/" },
@@ -43,6 +44,7 @@ const StandNav = () => {
             <FontAwesomeIcon icon={faHome} className="coffee-icon" /> پیشخوان{" "}
           </a>
         </li>
+
         <li>
           <a
             className="flex items-center gap-2 dark:hover:text-slate-300 transition duration-300 ease-in-out"
