@@ -27,7 +27,7 @@ const AvatarDropdown = () => {
   }, []);
 
   return (
-    <div className="relative inline-block text-left" ref={dropdownRef}>
+    <div className="relative z-10 inline-block text-left" ref={dropdownRef}>
       <button
         type="button"
         className="inline-flex items-center justify-center p-2 hover:bg-gray-700 focus:outline-none "
