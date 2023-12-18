@@ -5,7 +5,7 @@ import {
   faCircleQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import DarkModeToggle from "./DarkModeToggle";
 const StandNav = () => {
   const dropdownItems1 = [
     { id: 1, text: "شراره", link: "/" },
@@ -36,6 +36,7 @@ const StandNav = () => {
             height="60"
           />
         </li>
+        <DarkModeToggle />
         <li className="flex gap-2">
           <a
             className="flex items-center gap-2 dark:hover:text-slate-300 transition duration-300 ease-in-out"
