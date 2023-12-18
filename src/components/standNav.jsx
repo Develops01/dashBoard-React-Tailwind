@@ -5,7 +5,7 @@ import {
   faCircleQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DarkModeToggle from "./DarkModeToggle";
+
 const StandNav = () => {
   const dropdownItems1 = [
     { id: 1, text: "شراره", link: "/" },
@@ -25,7 +25,7 @@ const StandNav = () => {
 
   return (
     <>
-      <ul className=" h-screen flex flex-col gap-4 w-56 bg-white dark:bg-slate-800  px-6 py-8 ring-1 ring-slate-900/5 shadow-xl dark:text-white">
+      <ul className=" h-screen flex flex-col gap-4 w-60 bg-white dark:bg-slate-800  px-6 py-8 ring-1 ring-slate-900/5 shadow-xl dark:text-white">
         <li className="flex justify-center items-center gap-2  cursor-default">
           <p className=" text-xl ">دانشگاه آراد</p>
           <img
@@ -36,7 +36,7 @@ const StandNav = () => {
             height="60"
           />
         </li>
-        <DarkModeToggle />
+
         <li className="flex gap-2">
           <a
             className="flex items-center gap-2 dark:hover:text-slate-300 transition duration-300 ease-in-out"
