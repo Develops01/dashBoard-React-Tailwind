@@ -41,7 +41,7 @@ const AvatarDropdown = () => {
       </button>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg dark:bg-slate-800 dark:border-slate-600  dark:border bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-left absolute -right-24 top-20 mt-2 w-48 rounded-md shadow-lg dark:bg-slate-800 dark:border-slate-600  dark:border bg-white ring-1 ring-black ring-opacity-5">
           <div className="py-1">
             <button
               onClick={() => console.log("Go to Profile")}

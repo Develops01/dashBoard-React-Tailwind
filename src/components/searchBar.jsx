@@ -2,13 +2,13 @@
 import PropTypes from "prop-types";
 const SearchBar = ({ onChange }) => {
   return (
-    <div className="relative text-gray-600">
+    <div className="w-full relative text-gray-600">
       <input
         type="search"
         name="search"
         placeholder="Search"
         onChange={(e) => onChange(e.target.value)}
-        className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
+        className="bg-white dark:bg-gray-800 dark:text-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
       />
       <button type="submit" className="absolute right-0 top-0 mt-3 mr-4">
         <svg
