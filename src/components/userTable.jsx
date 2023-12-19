@@ -1,32 +1,50 @@
-// YourComponent.js
-
-import SearchableTable from "./searchAbleTable";
+// UserTable.js
+import { useState, useEffect } from "react";
+import axios from "axios";
+import SearchableTable from "./searchableTable";
 
 const UserTable = () => {
-  const tableHeaders = ["Name", "Age", "Country"];
-  const tableData = [
-    { id: 1, name: "John Doe", age: 30, country: "USA" },
-    { id: 2, name: "Jane Smith", age: 25, country: "Canada" },
-    // Add more data as needed
-  ];
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const renderTableRow = (item) => {
-    const name = String(item.name || ""); // Convert to string, handle undefined/null
-    const age = String(item.age || ""); // Convert to string, handle undefined/null
-    const country = String(item.country || ""); // Convert to string, handle undefined/null
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        setUsers(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const renderTableRow = (user) => {
+    const name = String(user.name || "");
+    const username = String(user.username || "");
+    const email = String(user.email || "");
 
     return [
       <td key="name">{name}</td>,
-      <td key="age">{age}</td>,
-      <td key="country">{country}</td>,
-      // Add more cells for additional columns
+      <td key="username">{username}</td>,
+      <td key="email">{email}</td>,
     ];
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div>
       <SearchableTable
-        headers={tableHeaders}
-        data={tableData}
+        headers={["Name", "Username", "Email"]}
+        data={users}
         rowRenderer={renderTableRow}
       />
     </div>

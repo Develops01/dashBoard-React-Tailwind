@@ -1,7 +1,7 @@
 // SearchableTable.js
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import SearchBar from "./searchBar";
+import SearchBar from "./SearchBar";
 
 const SearchableTable = ({ headers, data, rowRenderer }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,12 +11,16 @@ const SearchableTable = ({ headers, data, rowRenderer }) => {
   };
 
   const filteredData = data.filter((item) => {
-    const rowValue = String(rowRenderer(item));
-    return rowValue.toLowerCase().includes(searchQuery.toLowerCase());
+    const rowValue = headers
+      .map((header) => String(item[header.toLowerCase()]))
+      .join(" ")
+      .toLowerCase();
+
+    return rowValue.includes(searchQuery);
   });
 
   return (
-    <div className="border rounded-xl bg-slate-100  container mx-auto p-4">
+    <div className="border rounded-xl bg-slate-100 container mx-auto p-4">
       <div className="mb-4">
         <SearchBar placeholder="Search" onChange={handleSearch} />
       </div>
