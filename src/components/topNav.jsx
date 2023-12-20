@@ -3,7 +3,7 @@ import DarkModeToggle from "./DarkModeToggle";
 const TopNav = () => {
   return (
     <>
-      <div className="flex justify-end shadow-xl dark:bg-slate-800 ">
+      <div className=" flex fixed w-screen justify-end shadow-xl dark:bg-slate-800 ">
         <DarkModeToggle />
         <AvatarDropdown />
       </div>

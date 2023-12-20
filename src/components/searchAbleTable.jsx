@@ -20,18 +20,18 @@ const SearchableTable = ({ headers, data }) => {
   });
 
   return (
-    <div className=" border rounded-xl bg-slate-100  container mx-auto p-4 shadow-xl dark:bg-gray-700 dark:border-slate-800">
-      <div className="mb-4">
+    <div className="w-full border rounded-xl bg-slate-100  sm:container sm:mx-auto sm:p-4 shadow-xl dark:bg-gray-700 dark:border-slate-800">
+      <div className="w-full sm:mb-4">
         <SearchBar placeholder="Search" onChange={handleSearch} />
       </div>
-      <div className="overflow-x-auto">
-        <table className="min-w-full dark:bg-gray-600  bg-white border border-gray-300">
-          <thead>
+      <div className="w-full overflow-x-auto">
+        <table className="w-full overflow-auto block min-w-full dark:bg-gray-600  bg-white border border-gray-300">
+          <thead className="w-full">
             <tr className="dark:bg-gray-800  bg-gray-100">
               {headers.map((header) => (
                 <th
                   key={header.toLowerCase()}
-                  className="py-2 px-4 border-b text-right font-bold text-sm dark:text-white  text-gray-700"
+                  className="sm:py-2 py-1 px-2 ove sm:px-4 border-b text-right font-bold text-sm dark:text-white  text-gray-700"
                 >
                   {header}
                 </th>
@@ -42,12 +42,12 @@ const SearchableTable = ({ headers, data }) => {
             {filteredData.map((item, index) => (
               <tr
                 key={index}
-                className="  dark:hover:bg-gray-700 hover:bg-gray-50"
+                className=" w-1/4 dark:hover:bg-gray-700 hover:bg-gray-50"
               >
                 {headers.map((header) => (
                   <td
                     key={header.toLowerCase()}
-                    className="py-2 px-4 border-b text-sm dark:text-slate-200 text-gray-700"
+                    className="sm:py-2 sm:px-4  border-b text-sm dark:text-slate-200 text-gray-700"
                   >
                     {item[header.toLowerCase()]}
                   </td>
