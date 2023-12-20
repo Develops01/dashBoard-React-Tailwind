@@ -5,12 +5,10 @@ import TopNav from "./components/topNav";
 function App() {
   return (
     <>
-      <div className="flex flex-col w-screen ">
-        <TopNav />
-        <StandNav />
-        <div className=" w-full h-screen pt-24 bg-slate-700  flex justify-center items-center ">
-          <UserTable />
-        </div>
+      <TopNav />
+      <StandNav />
+      <div className="h-screen sm:pt-24 dark:bg-slate-700  flex justify-center items-center ">
+        <UserTable />
       </div>
     </>
   );

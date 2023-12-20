@@ -25,7 +25,7 @@ const SearchableTable = ({ headers, data }) => {
         <SearchBar placeholder="Search" onChange={handleSearch} />
       </div>
       <div className="w-full overflow-x-auto">
-        <table className="w-full overflow-auto block min-w-full dark:bg-gray-600  bg-white border border-gray-300">
+        <table className=" w-full overflow-auto block min-w-full dark:bg-gray-600  bg-white border border-gray-300">
           <thead className="w-full">
             <tr className="dark:bg-gray-800  bg-gray-100">
               {headers.map((header) => (
@@ -47,7 +47,7 @@ const SearchableTable = ({ headers, data }) => {
                 {headers.map((header) => (
                   <td
                     key={header.toLowerCase()}
-                    className="sm:py-2 sm:px-4  border-b text-sm dark:text-slate-200 text-gray-700"
+                    className="text-[12px] sm:py-2 sm:px-4  border-b text-sm dark:text-slate-200 text-gray-700"
                   >
                     {item[header.toLowerCase()]}
                   </td>
