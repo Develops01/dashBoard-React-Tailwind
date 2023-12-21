@@ -1,15 +1,16 @@
 import StandNav from "./components/standNav";
 import UserTable from "./components/userTable";
 import TopNav from "./components/topNav";
-// bef
+import Footer from "./components/footer";
 function App() {
   return (
     <>
       <TopNav />
       <StandNav />
-      <div className="h-screen sm:pt-24 dark:bg-slate-700  flex justify-center items-center ">
+      <div className="h-screen sm:pt-24 pt-20 dark:bg-slate-700  flex justify-center items-center ">
         <UserTable />
       </div>
+      <Footer />
     </>
   );
 }

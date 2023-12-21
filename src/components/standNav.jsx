@@ -48,8 +48,8 @@ const StandNav = () => {
       </button>
 
       {/* desktop Navigation */}
-      <div className=" lg:flex flex-col fixed h-screen">
-        <ul className="hidden h-full lg:flex flex-col gap-4 w-60 bg-white dark:bg-slate-800 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl dark:text-white">
+      <div className="shadow-xl shadow-sky-200 dark:shadow-slate-900 z-20 lg:flex flex-col fixed h-screen">
+        <ul className="hidden h-full lg:flex flex-col gap-4 w-60 bg-white dark:bg-slate-800 px-6 py-8 ring-1 ring-slate-900/5  dark:text-white">
           <li className="flex justify-center items-center gap-2  cursor-default">
             <p className=" text-xl ">دانشگاه آراد</p>
             <img
@@ -99,7 +99,7 @@ const StandNav = () => {
 
       {/* Mobile Navigation */}
       {isMobileNavOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40">
+        <div className=" lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40">
           <ul className="h-screen flex flex-col gap-4 w-60 bg-white dark:bg-slate-800  px-6 py-8 ring-1 ring-slate-900/5 shadow-xl dark:text-white">
             <li className="mt-8  flex justify-center items-center gap-2  cursor-default">
               <p className=" text-xl ">دانشگاه آراد</p>

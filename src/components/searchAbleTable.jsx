@@ -20,7 +20,7 @@ const SearchableTable = ({ headers, data }) => {
   });
 
   return (
-    <div className="w-full border rounded-xl bg-slate-100  sm:container sm:mx-auto sm:p-4 shadow-xl dark:bg-gray-700 dark:border-slate-800">
+    <div className="w-full border rounded-xl bg-slate-100  sm:container sm:mx-auto sm:p-4 shadow-lg shadow-sky-200 dark:shadow-slate-800 dark:bg-gray-700 dark:border-slate-800">
       <div className="w-full sm:mb-4">
         <SearchBar placeholder="Search" onChange={handleSearch} />
       </div>
