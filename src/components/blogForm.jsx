@@ -146,9 +146,10 @@ const BlogForm = () => {
       <div className="dark:text-white flex justify-around align-center mt-5 gap-2">
         <div className=" w-1/2">
           <label htmlFor="uploadVid">پیوند ویدیو :</label>
+
           <input
             id="uploadVid"
-            className=" border rounded w-full px-3 py-2 mt-2"
+            className="file:bg-white file:ml-20 file:rounded-e-3xl file:rounded-md file:p-2 file:text-slate-800  bg-slate-800 file:border-none file:bg-inherit file: border rounded w-full px-3 py-2 mt-2"
             type="file"
             required
           />
@@ -158,7 +159,7 @@ const BlogForm = () => {
           <label htmlFor="uploadImg">پیوند تصویر :</label>
           <input
             id="uploadImg"
-            className="border rounded w-full px-3 py-2 mt-2"
+            className=" file:bg-white file:ml-20 file:rounded-e-3xl file:rounded-md file:p-2 file:text-slate-800  bg-slate-800 file:border-none file:bg-inherit file: border rounded w-full px-3 py-2 mt-2"
             type="file"
             required
           />
