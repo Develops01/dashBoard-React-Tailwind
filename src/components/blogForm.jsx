@@ -44,7 +44,7 @@ const BlogForm = () => {
   };
 
   return (
-    <div className="  h-fit p-10 my-10 shadow-md shadow-sky-200 dark:bg-slate-700 dark:shadow-slate-900 rounded-lg  flex flex-col">
+    <div className="  h-fit p-10 my-10 shadow-md shadow-sky-200 bg-white dark:bg-slate-700 dark:shadow-slate-900 rounded-lg  flex flex-col">
       <p className=" dark:text-white mb-5 border-b p-2 text-xl">
         افزودن بلاگ جدید
       </p>
@@ -54,7 +54,7 @@ const BlogForm = () => {
           <div className="dark:text-white flex gap-3 flex-col justify-start items-start">
             <label htmlFor="tagSelector">یک دسته بندی انتخاب کن:</label>
             <select
-              className="bg-white dark:text-white border shadow-sky-200 dark:border-gray-800 dark:shadow-slate-800 dark:bg-slate-800  p-3 cursor-pointer shadow-md rounded-lg focus:outline-none  rounded-box w-auto"
+              className=" bg-white dark:text-white border shadow-sky-200 dark:border-gray-800 dark:shadow-slate-800 dark:bg-slate-800  p-3 cursor-pointer shadow-md rounded-lg focus:outline-none  rounded-box w-auto"
               id="tagSelector"
             >
               <option value="" disabled selected>
@@ -149,7 +149,7 @@ const BlogForm = () => {
 
           <input
             id="uploadVid"
-            className="file:bg-white file:ml-20 file:rounded-e-3xl file:rounded-md file:p-2 file:text-slate-800  bg-slate-800 file:border-none file:bg-inherit file: border rounded w-full px-3 py-2 mt-2"
+            className="file:bg-white file:ml-20 file:rounded-e-3xl file:rounded-md file:p-2 file:text-slate-800  dark:bg-slate-800  file:bg-inherit file:border-none file:shadow-md file:shadow-sky-200 dark:file:shadow-slate-500 border rounded w-full px-3 py-2 mt-2"
             type="file"
             required
           />
@@ -159,7 +159,7 @@ const BlogForm = () => {
           <label htmlFor="uploadImg">پیوند تصویر :</label>
           <input
             id="uploadImg"
-            className=" file:bg-white file:ml-20 file:rounded-e-3xl file:rounded-md file:p-2 file:text-slate-800  bg-slate-800 file:border-none file:bg-inherit file: border rounded w-full px-3 py-2 mt-2"
+            className="file:bg-white file:ml-20 file:rounded-e-3xl file:rounded-md file:p-2 file:text-slate-800  dark:bg-slate-800  file:bg-inherit file:border-none file:shadow-md file:shadow-sky-200 dark:file:shadow-slate-500 border rounded w-full px-3 py-2 mt-2"
             type="file"
             required
           />

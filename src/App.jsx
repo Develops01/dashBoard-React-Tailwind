@@ -8,11 +8,9 @@ function App() {
     <>
       <TopNav />
       <StandNav />
-      <div className="flex-col h-screen sm:pt-24 pt-20 dark:bg-slate-700  flex justify-center items-center ">
-        <UserTable />
+      <div className="  pt-28 bg-gradient-to-bl from-rose-300 via-purple-400 to-sky-300 dark:bg-none  dark:bg-slate-700  flex justify-center items-center ">
         <BlogForm />
       </div>
-      <div className="h-screen sm:pt-24 pr-28 py-96 dark:bg-slate-700  flex justify-center items-center "></div>
 
       <Footer />
     </>

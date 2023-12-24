@@ -51,7 +51,7 @@ const Dropdown = ({ items, menuText }) => {
             <a
               key={item.id}
               href={item.link}
-              className="block px-4 py-2 text-sm dark:text-white text-gray-700 dark:hover:bg-slate-700 hover:bg-gray-100 transition duration-300 ease-in-out"
+              className="block px-4 py-2 text-sm dark:text-white text-gray-700 dark:hover:bg-slate-700 hover:bg-sky-200 transition duration-300 ease-in-out"
             >
               {item.text}
             </a>

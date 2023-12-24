@@ -30,7 +30,7 @@ const AvatarDropdown = () => {
     <div className="relative z-10 inline-block text-left" ref={dropdownRef}>
       <button
         type="button"
-        className="inline-flex items-center justify-center p-2 hover:bg-gray-700 focus:outline-none "
+        className="inline-flex items-center justify-center p-2 hover:bg-sky-200 dark:hover:bg-gray-700 focus:outline-none "
         onClick={toggleDropdown}
       >
         <img
